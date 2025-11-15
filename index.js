@@ -1,20 +1,13 @@
 const express = require("express")
-const app  = express()
-const fs = require("fs")
-const url = require("url")
-const { error } = require("console")
+const app = express()
+const { connectDB } = require("./conntection")
+const userRouter = require("./route/user")
+app.use(express.json());
 
-// const myserver = http.createServer((req, res) => {
-//      const log = `${Date.now()} this server append file\n`
-//      fs.appendFile("logo.text", log, (error, data) => {
-//           res.end("Hello kdf")
-//      })
-// })
 
-app.get('/test' ,(req ,res)=>{
-   res.send("hii")
-})
+app.use("/user", userRouter);
 
 app.listen(300, () => {
-     console.log("server start")
+   connectDB()
+   console.log("server start")
 })
