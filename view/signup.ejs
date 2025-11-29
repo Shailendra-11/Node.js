@@ -9,40 +9,44 @@
 <body>
      <%- include('./partial/Nav') %>
           <div class="container mt-3 col-md-4">
-               <form>
+               <form action="/user/signup" method="post">
                     <div class="mb-3">
                          <label for="exampleInputEmail1" class="form-label">FirstName</label>
-                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="FirstName">
+                         <input type="text" name="FirstName" class="form-control" id="exampleInputEmail1"
+                              aria-describedby="FirstName">
                     </div>
                     <div class="mb-3">
                          <label for="exampleInputEmail1" class="form-label">LastName</label>
-                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="FirstName">
+                         <input type="text" name="LastName" class="form-control" id="exampleInputEmail1"
+                              aria-describedby="LastName">
                     </div>
                     <div class="mb-3">
                          <label for="exampleInputEmail1" class="form-label">Email</label>
-                         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="FirstName">
+                         <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                              aria-describedby="">
                     </div>
                     <div class="mb-3">
                          <label for="exampleInputPassword1" class="form-label">Password</label>
-                         <input type="password" class="form-control" id="exampleInputPassword1">
+                         <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                     </div>
-                    <div class="form-check mb-3">
-                         <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                         <label class="form-check-label" for="radioDefault1">
-                             Male
-                         </label>
-                    </div>
-                    <div class="form-check mb-3">
-                         <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault1">
-                         <label class="form-check-label" for="radioDefault1">
-                             Female
-                         </label>
-                    </div>
-                    <div class="form-check mb-3">
-                         <input class="form-check-input" type="radio" name="radioDefault" id="radioDefault2" checked>
-                         <label class="form-check-label" for="radioDefault2">
-                              Other
-                         </label>
+                    <div class="mb-3">
+                         <label class="form-label d-block">Gender</label>
+
+                         <div class="form-check">
+                              <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                              <label class="form-check-label" for="male">Male</label>
+                         </div>
+
+                         <div class="form-check">
+                              <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                              <label class="form-check-label" for="female">Female</label>
+                         </div>
+
+                         <div class="form-check">
+                              <input class="form-check-input" type="radio" name="gender" id="other" value="other"
+                                   checked>
+                              <label class="form-check-label" for="other">Other</label>
+                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                </form>

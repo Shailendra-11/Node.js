@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <%- include('./partial/head') %>
+          <title>Home</title>
+</head>
+
+<body>
+     <%- include('./partial/Nav') %>
+          <div class="container mt-3 col-md-4">
+               <form action="/user/signin" method="post">
+                    <div class="mb-3">
+                         <label for="exampleInputEmail1" class="form-label">Email</label>
+                         <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                              aria-describedby="">
+                    </div>
+                    <div class="mb-3">
+                         <label for="exampleInputPassword1" class="form-label">Password</label>
+                         <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+               </form>
+          </div>
+          <%- include('./partial/script') %>
+
+</body>
+
+</html>
