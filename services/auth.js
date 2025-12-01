@@ -9,7 +9,6 @@ function createTokenForUser(user){
           role:user.role,
      }
   const token = JWT.sign(payload , secret)
-  console.log("token" , token)
   return token;
 }
 

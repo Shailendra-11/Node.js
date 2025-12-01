@@ -29,9 +29,7 @@ Userrouter.get("/logout", (req, res) => {
 });
 
 Userrouter.post("/signup", async (req, res) => {
-     
      // console.log(req.body)
-
      const {FirstName, LastName, email, password, gender } = req.body;
      await User.create({
           FirstName,
@@ -42,11 +40,6 @@ Userrouter.post("/signup", async (req, res) => {
      })
      return res.redirect("/")
 })
-
-
-
-
-
 
 
 module.exports = Userrouter;
